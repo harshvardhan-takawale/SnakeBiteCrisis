@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SnakeBiteCrisis</string>
+    <string name="app_id">Snapp</string>
 </resources>
