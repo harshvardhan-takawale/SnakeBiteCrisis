@@ -5,8 +5,20 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
     tools:context="com.example.faouzi.snakebitecrisis.MainActivity">
 
+
+    <Button
+        android:id="@+id/BtnCamera"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text=""
+        android:background="@drawable/camera"
+        android:layout_marginBottom="60dp"
+        android:layout_alignBottom="@+id/server"
+        android:layout_centerHorizontal="true"
+        />
 
     <ImageView
         android:layout_width="300dp"
@@ -25,30 +37,76 @@
         android:layout_marginTop="25dp"
         />
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Enter a server"
         android:id="@+id/server"
-        android:layout_below="@+id/uploadBn"
+        android:layout_marginBottom="86dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/chooseBn"
+        android:background="@drawable/browse"
+        android:layout_marginBottom="60dp"
+        android:layout_alignBottom="@+id/server"
+        android:layout_alignRight="@id/BtnCamera"
+        android:layout_marginRight="100dp"
+        />
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/uploadBn"
+        android:background="@drawable/upload"
+        android:layout_marginBottom="60dp"
+        android:layout_alignBottom="@+id/server"
+        android:layout_alignLeft="@id/BtnCamera"
+        android:layout_marginLeft="100dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/back"
+        android:alpha="0.4"
+        android:layout_below="@+id/imageView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="14dp" />
-    <Button
-        android:layout_width="match_parent"
+        android:visibility="gone"
+        />
+
+    <ToggleButton
+        android:id="@+id/toggleButton3"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/name"
-        android:text="Choose Image"
-        android:id="@+id/chooseBn"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp" />
-    <Button
-        android:layout_width="match_parent"
+        android:text="Upload"
+        android:layout_marginBottom="50dp"
+        android:layout_alignBottom="@+id/server"
+        android:layout_marginLeft="250dp"
+        android:visibility="gone"/>
+
+    <ToggleButton
+        android:id="@+id/toggleButton2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/chooseBn"
-        android:text="Upload Image"
-        android:id="@+id/uploadBn"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp" />
+        android:text="Camera"
+        android:layout_alignBaseline="@+id/toggleButton3"
+        android:layout_alignBottom="@+id/toggleButton3"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"/>
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Browse"
+        android:layout_alignBottom="@+id/server"
+        android:layout_alignRight="@id/toggleButton2"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="100dp"
+        android:visibility="gone"/>
 
 
 </RelativeLayout>
